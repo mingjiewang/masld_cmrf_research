@@ -1,0 +1,136 @@
+[
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20260809_152651/01_reanalysis.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20260809_152651/01_reanalysis.R",
+    "source_sha256": "21a7fa4db7e206e59b93951cbb43a0b744c65406dd0722a6719415a076b85471",
+    "public_sha256": "d6219662d5bb392b07f10de17417bd41f8ec2966bb9f456b3d3d74b782619c8a",
+    "role": "analysis",
+    "changes": [
+      "Added explicit mjwang author header"
+    ]
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20260809_152651/03_qc_exploratory.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20260809_152651/03_qc_exploratory.R",
+    "source_sha256": "aa504abb97d4c65a3f1548eda33b30b192464af658064f8c0f56b043e5a9963e",
+    "public_sha256": "e32cf34ed4749e3dddedf40602ee250b04d102e0c876193a127799874847e626",
+    "role": "analysis",
+    "changes": [
+      "Added explicit mjwang author header"
+    ]
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261003_165814/04_correct_mi_pooling.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261003_165814/04_correct_mi_pooling.R",
+    "source_sha256": "501c618859d58eb48681662918c2731a85d12b07092557013cb570c4b5f9ce07",
+    "public_sha256": "501c618859d58eb48681662918c2731a85d12b07092557013cb570c4b5f9ce07",
+    "role": "analysis",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261018_173329/center_comparison.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261018_173329/center_comparison.R",
+    "source_sha256": "4a2bed52aa59fdf498a304aa0457c409c2c4d8b6188448335c90387b56b221b3",
+    "public_sha256": "4a2bed52aa59fdf498a304aa0457c409c2c4d8b6188448335c90387b56b221b3",
+    "role": "analysis",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261023_001156/01_steatosis_components.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261023_001156/01_steatosis_components.R",
+    "source_sha256": "7eef9c10cfb3a3f69835dd1881a3d0b116f807f3bd7bb6754aa7fdf2b149d446",
+    "public_sha256": "7eef9c10cfb3a3f69835dd1881a3d0b116f807f3bd7bb6754aa7fdf2b149d446",
+    "role": "analysis",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261016_225206/01_pattern_vs_rest.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261016_225206/01_pattern_vs_rest.R",
+    "source_sha256": "fccf47f58e0e4e800868470a7bdcd327962862f625a4299f2a85b7ecd5d00ae5",
+    "public_sha256": "1009bdc523444fc928433ad5c57b1b331022de15697d6653bcc751206f324586",
+    "role": "analysis",
+    "changes": [
+      "Made historical display-parity check optional; estimates and tests unchanged"
+    ]
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261027_230711/01_steatosis_probabilities.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261027_230711/01_steatosis_probabilities.R",
+    "source_sha256": "e38df6ffd800fdb3171a1625db186cba6d6aa744d7c7b06b778d5ad9a546568e",
+    "public_sha256": "e38df6ffd800fdb3171a1625db186cba6d6aa744d7c7b06b778d5ad9a546568e",
+    "role": "analysis",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261003_165814/02_figures.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261003_165814/02_figures.R",
+    "source_sha256": "5c2b47466f01fbfb0d2d40d1b9321523a0a82a776a572888b2931beb77e96399",
+    "public_sha256": "5c2b47466f01fbfb0d2d40d1b9321523a0a82a776a572888b2931beb77e96399",
+    "role": "historical plotting",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261021_131343/figure1.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261021_131343/figure1.R",
+    "source_sha256": "c2950f626ef0a51f82bae61b3b202d695fb43c95b8966369df1c35ebfa89d392",
+    "public_sha256": "c2950f626ef0a51f82bae61b3b202d695fb43c95b8966369df1c35ebfa89d392",
+    "role": "historical plotting",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261024_094342/figure2_white_labels.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261024_094342/figure2_white_labels.R",
+    "source_sha256": "9eafc35b3434f71b4ff81734454b59f4e1842167c96c3998e2b0769e66d511ce",
+    "public_sha256": "9eafc35b3434f71b4ff81734454b59f4e1842167c96c3998e2b0769e66d511ce",
+    "role": "historical plotting",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261022_003505/figures34.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261022_003505/figures34.R",
+    "source_sha256": "4a1a196a5514c3ddce1a208368aab50e530762fc47386251318cdab7e6824dc8",
+    "public_sha256": "4a1a196a5514c3ddce1a208368aab50e530762fc47386251318cdab7e6824dc8",
+    "role": "historical plotting",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261024_003114/01_relabel_supplementary_figure.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261024_003114/01_relabel_supplementary_figure.R",
+    "source_sha256": "aba6e4eba288b7eb0594b1922c83aea467c5bc368c614bdb754f0de085e31319",
+    "public_sha256": "aba6e4eba288b7eb0594b1922c83aea467c5bc368c614bdb754f0de085e31319",
+    "role": "historical plotting",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261023_001156/02_figure_steatosis_components.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261023_001156/02_figure_steatosis_components.R",
+    "source_sha256": "094ba66e68f288ee75475c317e20d0c772dd8adfe58976cdf84de337a60ba1ff",
+    "public_sha256": "094ba66e68f288ee75475c317e20d0c772dd8adfe58976cdf84de337a60ba1ff",
+    "role": "historical plotting",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261016_225206/02_pattern_comparison_figure.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261016_225206/02_pattern_comparison_figure.R",
+    "source_sha256": "43236fbbc18cbfc1dab96ee8c570177bac46f994cca7fd368f829a90a4fa2be6",
+    "public_sha256": "43236fbbc18cbfc1dab96ee8c570177bac46f994cca7fd368f829a90a4fa2be6",
+    "role": "historical plotting",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261027_230711/02_figure4_matching_figure2.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261027_230711/02_figure4_matching_figure2.R",
+    "source_sha256": "93da892d52e8eb2ac9d582ba1c06e336547b7ed1215a7ff68a1d99b108e83c6e",
+    "public_sha256": "93da892d52e8eb2ac9d582ba1c06e336547b7ed1215a7ff68a1d99b108e83c6e",
+    "role": "historical plotting",
+    "changes": []
+  },
+  {
+    "source_relative_path": "paper1_cmrf_pathology/code/R/versions/20261025_124331/revise_and_export.R",
+    "public_path": "source_scripts/paper1_cmrf_pathology/code/R/versions/20261025_124331/revise_and_export.R",
+    "source_sha256": "2f6723b9ae2a635c67634aca1a6f93af6694daae8cb0952f662265d7ff152368",
+    "public_sha256": "2f6723b9ae2a635c67634aca1a6f93af6694daae8cb0952f662265d7ff152368",
+    "role": "historical plotting",
+    "changes": []
+  }
+]

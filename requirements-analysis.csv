@@ -1,0 +1,9 @@
+package,recorded_version
+R,4.5.3
+readxl,1.4.5
+digest,0.6.39
+MASS,7.3-65
+ordinal,2025.12-29
+mice,3.19.0
+emmeans,2.0.3
+jsonlite,2.0.0

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Please cite the associated study when using this research code."
+title: "masld_cmrf_research"
+type: software
+authors:
+  - family-names: "mjwang"
+date-released: "2026-11-26"
+version: "2026.11.26"
