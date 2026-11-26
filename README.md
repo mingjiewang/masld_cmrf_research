@@ -1,39 +1,42 @@
-# MASLD CMRF research code
+# MASLD CMRF research
 
-Maintainer and research-code author: mjwang.
+Author and maintainer: mjwang.
 
-This repository provides the statistical analysis code for a multicentre cross-sectional study of cardiometabolic risk-factor (CMRF) count, components and glycaemic categories in relation to liver histology. It includes the frozen complete-component analysis, multiple-imputation sensitivity analyses, exploratory comparisons and plotting source used during manuscript preparation.
+This repository contains one analysis pipeline for a multicentre cross-sectional study of cardiometabolic risk-factor (CMRF) count, individual components and glycaemic categories in relation to liver histology. The numbered files are successive analysis steps, not competing versions of the study. Earlier code history is retained by Git rather than duplicated in the current directory tree.
 
-## Data and scope
+## Layout
 
-No individual-level data, imputed datasets, source workbooks, manuscript files or credentials are included. Reproducing study results requires authorised access to the original source workbook. The header-only templates describe the interface; they contain no observations and are not a demonstration cohort. The scripts assert the original study dimensions and are not a general clinical calculator.
+- `analysis/`: seven statistical steps in execution order.
+- `figures/`: plotting scripts used for the manuscript figures and tables.
+- `templates/`: header-only data interface and variable definitions, with no study observations.
+- `run_analysis.py`: the single analysis entry point.
+- `requirements-analysis.csv`: recorded R and package versions.
+- `source_manifest.json`: provenance and hashes of the unchanged statistical scripts.
 
-The executed definitions are preserved: Asian adiposity thresholds, the combined glycaemic criterion, recorded hypertension, measured triglycerides and sex-specific strict-less-than HDL-C thresholds. The source extract does not contain separate medication or blood-pressure fields. The code must not be interpreted as having reconstructed unavailable branches of the consensus definition. ZS source prefixes are assigned to RJ in the derived centre variable; they are not analysed as a fourth centre.
+## Run the analysis
 
-## Analysis sequence
-
-Run `python3 run_analysis.py --help` for the interface. The default mode prints the plan without copying data or running models. Use an empty work-directory path outside this repository and an authorised workbook to execute:
+An authorised copy of the original workbook is required. The repository does not contain individual-level data, imputed datasets or manuscript files. The scripts assert the study's original dimensions and are not a general clinical risk calculator.
 
 ```sh
+python3 run_analysis.py --check-environment
+python3 run_analysis.py --work-dir /path/to/new_private_run
 python3 run_analysis.py --input-workbook /path/to/authorised_workbook.xlsx --work-dir /path/to/new_private_run --execute
 ```
 
-The runner copies the restricted workbook into the private work directory without modifying the source. Generated participant-level files and imputations remain there; do not upload that directory.
+The default command prints the seven-step plan without writing data or running models. Execution requires a new private work directory outside the code repository. The runner copies the workbook into that directory, leaves the source unchanged, and reconstructs the internal paths expected by the original scripts. Participant-level outputs and imputations stay in that private workspace and must not be uploaded. Dependencies are not installed automatically.
 
-1. `20260809_152651/01_reanalysis.R`: adult eligibility, conservative five-domain reconstruction, complete-component models, fibrosis probabilities and raw-variable multiple imputation (50 datasets, 20 iterations).
-2. `20260809_152651/03_qc_exploratory.R`: diagnostics, within-count contrasts, BMI interactions and imputation diagnostics.
-3. `20261003_165814/04_correct_mi_pooling.R`: final MI pooling using the fitted model rank for the complete-data degrees of freedom.
-4. `20261018_173329/center_comparison.R`: centre-specific descriptive comparisons.
-5. `20261023_001156/01_steatosis_components.R`: complete-component and imputed steatosis component models.
-6. `20261016_225206/01_pattern_vs_rest.R`: 11 common profiles versus all other participants; unadjusted, exploratory comparisons.
-7. `20261027_230711/01_steatosis_probabilities.R`: marginal-standardized S≥2 and S3 probabilities with centre-stratified bootstrap intervals.
+## Analysis steps
 
-The original R environment was 4.5.3. The recorded core versions are listed in `requirements-analysis.csv`; no dependencies are installed automatically. The validation command reports the locally available versions. Seeds and model formulas are retained in the scripts. The historical plotting scripts additionally use grid, ggplot2, patchwork, dplyr, tidyr, svglite, ragg, ggsci and magick.
+1. Reconstruct eligibility and CMRFs; fit complete-component models and generate the 50 raw-variable imputations.
+2. Run diagnostics and exploratory within-count comparisons.
+3. Pool imputed models using the fitted model rank for finite-sample degrees of freedom.
+4. Describe differences across centres.
+5. Fit steatosis component models in complete-component and imputed data.
+6. Describe common profiles versus the remaining participants.
+7. Estimate standardized steatosis probabilities with centre-stratified bootstrap intervals.
 
-## Plotting source
+The executed definitions and statistical implementation are unchanged: Asian adiposity thresholds, the combined glycaemic criterion, recorded hypertension, measured triglycerides and sex-specific strict-less-than HDL-C thresholds. Separate medication and blood-pressure fields were unavailable for reconstruction. ZS source prefixes map to RJ in the derived centre variable. The nonbinary HCV entry is converted to missing by the original MI factor coding.
 
-The `source_scripts` tree preserves the original project-relative paths. Historical plotting scripts read version-specific aggregate source-data tables and sometimes previous exports for parity checks. They are included for transparency; the runner executes the seven statistical stages above, not manuscript/PDF assembly or every historical rendering step. The source summaries and prior exports needed by those plotting scripts are not bundled. A byte-identical figure regeneration is therefore not asserted for this code-only release.
+## Reproduction scope
 
-## Reproducibility notes
-
-Reproduction requires authorised source data and the stated software environment. The study models were not rerun while preparing this repository, and the historical figure dependencies described above are not bundled. In the frozen MI preprocessing, a nonbinary HCV value is converted to missing by binary-factor coding. `source_manifest.json` records source hashes and the limited packaging changes: mjwang author headers and an optional historical display-parity check; the statistical implementation is otherwise retained.
+Reproducing the study estimates requires authorised data access. The plotting scripts also read aggregate intermediate tables and, in some cases, earlier exports; the statistical runner executes the seven analysis steps rather than every manuscript-assembly or historical rendering step. Exact regeneration of all figure files is therefore not asserted by this code-only distribution. Consolidating the public directory layout does not refit the models or alter their estimates.
